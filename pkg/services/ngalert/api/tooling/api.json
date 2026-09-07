@@ -418,6 +418,9 @@
     "for": {
      "type": "string"
     },
+    "keep_firing_for": {
+     "type": "string"
+    },
     "labels": {
      "additionalProperties": {
       "type": "string"
@@ -1306,6 +1309,9 @@
     },
     "grafana_alert": {
      "$ref": "#/definitions/GettableGrafanaRule"
+    },
+    "keep_firing_for": {
+     "type": "string"
     },
     "labels": {
      "additionalProperties": {
@@ -2346,6 +2352,9 @@
     },
     "grafana_alert": {
      "$ref": "#/definitions/PostableGrafanaRule"
+    },
+    "keep_firing_for": {
+     "type": "string"
     },
     "labels": {
      "additionalProperties": {
@@ -4017,6 +4026,7 @@
    "type": "object"
   },
   "alertGroup": {
+   "description": "AlertGroup alert group",
    "properties": {
     "alerts": {
      "description": "alerts",
@@ -4263,6 +4273,7 @@
    "type": "array"
   },
   "integration": {
+   "description": "Integration integration",
    "properties": {
     "lastNotifyAttempt": {
      "description": "A timestamp indicating the last attempt to deliver a notification regardless of the outcome.\nFormat: date-time",
