@@ -3262,6 +3262,9 @@
         "for": {
           "type": "string"
         },
+        "keep_firing_for": {
+          "type": "string"
+        },
         "labels": {
           "type": "object",
           "additionalProperties": {
@@ -4153,6 +4156,9 @@
         },
         "grafana_alert": {
           "$ref": "#/definitions/GettableGrafanaRule"
+        },
+        "keep_firing_for": {
+          "type": "string"
         },
         "labels": {
           "type": "object",
@@ -5194,6 +5200,9 @@
         },
         "grafana_alert": {
           "$ref": "#/definitions/PostableGrafanaRule"
+        },
+        "keep_firing_for": {
+          "type": "string"
         },
         "labels": {
           "type": "object",
@@ -6996,6 +7005,7 @@
       }
     },
     "gettableAlert": {
+      "description": "GettableAlert gettable alert",
       "type": "object",
       "required": [
         "labels",
@@ -7052,7 +7062,6 @@
       "$ref": "#/definitions/gettableAlert"
     },
     "gettableAlerts": {
-      "description": "GettableAlerts gettable alerts",
       "type": "array",
       "items": {
         "$ref": "#/definitions/gettableAlert"
@@ -7060,7 +7069,6 @@
       "$ref": "#/definitions/gettableAlerts"
     },
     "gettableSilence": {
-      "description": "GettableSilence gettable silence",
       "type": "object",
       "required": [
         "comment",
@@ -7117,6 +7125,7 @@
       "$ref": "#/definitions/gettableSilences"
     },
     "integration": {
+      "description": "Integration integration",
       "type": "object",
       "required": [
         "name",
@@ -7299,6 +7308,7 @@
       "$ref": "#/definitions/postableSilence"
     },
     "receiver": {
+      "description": "Receiver receiver",
       "type": "object",
       "required": [
         "active",
